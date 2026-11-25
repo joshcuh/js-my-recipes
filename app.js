@@ -8,9 +8,11 @@ const port = 3010
 app.use(express.static('public'))
 app.use(express.json())
 
+
 // routes
 app.use('/api/v1', require('./routes/api/v1/recipes'))
 app.use('/', require('./routes/pages/recipes'))
+app.use('/api/v1', require('./routes/api/v1/recipes'))
 
 // server
 const url = colors.blue('http://localhost:3010/')
